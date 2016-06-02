@@ -1,0 +1,26 @@
+
+
+<div class="new-note nuevanota text-center">
+  <div class="new-note-container container">
+    <p ng-if="createController.errors"> {{userNuevoCtrl.errors}} </p>
+    <form class="form" ng-submit="userNuevoCtrl.guardaNuevoUser()">
+      <fieldset class="form-field">
+        <label class="form-label" for="name">Nombre:</label><br>
+        <input class="form-input" placeholder="Nombre del usuario" name="name" ng-model="userNuevoCtrl.user.name" required/>
+      </fieldset><br>
+      <fieldset class="form-field">
+        <label class="form-label" for="bio">Bio:</label><br>
+        <textarea rows="3" cols="50" class="form-input" name="bio" ng-model="userNuevoCtrl.user.bio" placeholder="A short description of this note"></textarea>
+      </fieldset><br>
+      <fieldset class="form-field">
+        <label class="form-label" for="email">email:</label><br>
+        <textarea rows="5" cols="50" class="form-input" name="email" ng-model="userNuevoCtrl.user.email" placeholder="your email"></textarea>
+      </fieldset><br>
+
+      <button class="btn" style="font-weight:bold;" type="Submit" ng-disabled="userNuevoCtrl.$invalid">Crear Usuario</button>
+      <a href="/#/usuarios">
+        <button type="button" class="btn btn-default">Cancelar</button>
+      </a>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+
+
+<div class="users-wrapper">
+  <div class="notes-header nuevabuscar text-center">
+  <h1 class="porcion text-center" >USUARIOS</h1>
+  <a class="btn btn-default" style="background-color:black;color:white;"href='#/otronuevo'><!--#/notas/nueva-->
+        <i class="icon add"></i>
+        Crear nuevo usuario
+      </a>
+    </div>
+  <div class="users-wrapper">
+    <p class="card-users" 
+      ng-repeat="usuario in UsuariosIndex.usuarios">
+      <na-elemento-usuario 
+       id="usuario._id"
+        name="usuario.name"
+        bio="usuario.bio"
+        email="usuario.email"
+        image="gravatarUrl(usuario.email)">
+     
+      </na-elemento-usuario>
+
+    </p>
+  </div>
+</div>
+
+
+      <!--<div class="card" title="{{usuario.name}}">
+        <h2 class="h3">{{usuario.name}}</h2>
+        <p>{{usuario.bio}}</p>
+        <p>{{usuario.email}}</p>
+      </div>-->

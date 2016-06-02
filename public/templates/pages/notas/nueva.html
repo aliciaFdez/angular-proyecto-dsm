@@ -1,0 +1,26 @@
+
+
+<div class="new-note nuevanota text-center">
+  <div class="new-note-container container">
+    <p ng-if="createController.errors"> {{notaNuevaCtrl.errors}} </p>
+    <form class="form" ng-submit="notaNuevaCtrl.guardaNuevaNota()">
+      <fieldset class="form-field">
+        <label class="form-label" for="title">Título:</label><br>
+        <input class="form-input" placeholder="Título de la nota" name="title" ng-model="notaNuevaCtrl.nota.header" required/>
+      </fieldset><br>
+      <fieldset class="form-field">
+        <label class="form-label" for="description">Descripción:</label><br>
+        <textarea rows="3" cols="50" class="form-input" name="description" ng-model="notaNuevaCtrl.nota.description" placeholder="A short description of this note"></textarea>
+      </fieldset><br>
+      <fieldset class="form-field">
+        <label class="form-label" for="description">Contenido:</label><br>
+        <textarea rows="5" cols="50" class="form-input" name="contenido" ng-model="notaNuevaCtrl.nota.contenido" placeholder="A large description of this note"></textarea>
+      </fieldset><br>
+
+      <button class="btn" style="font-weight:bold;" type="Submit" ng-disabled="notaNuevaCtrl.$invalid">Crear Nota</button>
+      <a href="/#/notas">
+        <button type="button" class="btn btn-default">Cancelar</button>
+      </a>
+    </form>
+  </div>
+</div>

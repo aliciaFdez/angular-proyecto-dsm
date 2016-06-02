@@ -1,0 +1,26 @@
+
+
+<div class="card muestranota text-center">
+  <h1><i class="{{nota.icon}} icon left"></i>{{notaShowCtrl.nota.header}}</h1>
+  <h3>Título: </h3><br>
+  <p style="color:white;">{{notaShowCtrl.nota.title || notaShowCtrl.nota.title}}</p><br>
+  <h3>Descripción:</h3><br>
+  <p style="color:white;">{{notaShowCtrl.nota.description}}</p><br>
+  <h3>Contenidos:</h3><br>
+  <p style="color:white;">{{notaShowCtrl.nota.content}}</p><br>
+  
+  <a href="/#/notas">
+     <button style="color:#0099FF;font-weight:bold;"type="button" class="btn btn-default">Volver</button>
+
+  </a>
+   <a href="#/notas/{{notaShowCtrl.nota._id}}/editar">
+   <button class="btn" style="font-weight:bold;">Editar</button>
+  </a>
+<!-- <a href="/notas/borrar/{{notaShowCtrl.nota._id}}"> 
+   <button class="btn" style="font-weight:bold;" " >Eliminar</button>-->
+ <!-- </a> 
+  <nota-borrar-button ng-click="borrarNota(nota)">Borrar</na-borrar-button>
+   <button class="btn" style="font-weight:bold;" ng-click="editarNota(nota)">Editar</button>-->
+  <button class="btn" style="font-weight:bold;" ng-click="borrarNota(nota)">Borrar</button>
+</div>
+

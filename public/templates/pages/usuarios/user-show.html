@@ -1,0 +1,21 @@
+
+
+<div class="card muestranota text-center">
+   <h1><i class="{{user.icon}} icon left"></i>{{userShowCtrl.user.name}}</h1>
+  <h3>Nombre: </h3><br>
+  <p>{{userShowCtrl.user.name || userShowCtrl.user.name}}</p><br>
+  <h3>Descripción:</h3><br>
+  <p>{{userShowCtrl.user.bio}}</p><br>
+  <h3>Email:</h3><br>
+  <p>{{userShowCtrl.user.email}}</p><br>
+  
+  <a href="/#/usuarios">
+     <button style="color:#0099FF;font-weight:bold;"type="button" class="btn btn-default">Volver</button>
+
+  </a>
+    <a href="#/usuarios/{{userShowCtrl.user._id}}/editar">
+   <button class="btn" style="font-weight:bold;">Editar</button>
+  </a>
+   <button class="btn" style="font-weight:bold;" ng-click="borrarUser(user)">Borrar</button>
+</div>
+

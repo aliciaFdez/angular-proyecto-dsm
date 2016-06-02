@@ -1,0 +1,26 @@
+
+
+<div class="new-note nuevanota text-center">
+  <div class="new-note-container container">
+    <p ng-if="createController.errors"> {{userEditarCtrl.errors}} </p>
+    <form class="form"ng-submit="userEditarCtrl.actualizaUser()" ><!--ng-submit="notaEditarCtrl.actualizaNota(nota)"-->
+      <fieldset class="form-field">
+        <label class="form-label" for="title">Nombre: </label><br>
+        <input class="form-input" name="title" ng-model="userEditarCtrl.user.name"  required/>
+      </fieldset><br><!--  placeholder="{{notaEditarCtrl.nota.header}}" -->
+      <fieldset class="form-field">
+        <label class="form-label" for="description">Bio:</label><br>
+        <textarea rows="3" cols="50" class="form-input" name="description" ng-model="userEditarCtrl.user.bio" ></textarea><!-- placeholder="{{notaEditarCtrl.nota.description}}"  -->
+      </fieldset><br>
+      <fieldset class="form-field">
+        <label class="form-label" for="description">Email:</label><br>
+        <textarea rows="5" cols="50" class="form-input" name="contenido" ng-model="userEditarCtrl.user.email" ></textarea><!--  placeholder="{{notaEditarCtrl.nota.contenido}}" -->
+      </fieldset><br>
+
+      <button class="btn" style="font-weight:bold;" type="Submit" ng-disabled="userEditarCtrl.$invalid"  >Actualizar</button><!-- ng-click="actualizaNota(nota)"-->
+      <a href="#/usuarios">
+        <button type="button" class="btn btn-default">Cancelar</button>
+      </a>
+    </form>
+  </div>
+</div>

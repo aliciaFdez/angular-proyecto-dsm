@@ -1,0 +1,29 @@
+
+
+
+<div class="note-wrapper">
+  <div class="note-content">
+    <div class="notes-header nuevabuscar text-center">
+      <h1 class="porcion " title="Notes">NOTAS</h1>
+      <a class="btn btn-default" style="background-color:black;color:white;"href='#/notas/nueva'>
+        <i class="icon add"></i>
+        Crear nueva Nota
+      </a>
+      <b>Buscar: </b>
+      <input ng-model="search.$"/>
+    </div>
+    <div class="note-wrapper">
+      <p class="card-notes" 
+      ng-repeat="nota in NotasIndex.notas | filter: 'ipsum' | filter: search"> 
+        <na-elemento-nota 
+          id="nota._id"
+          title="nota.title"
+          description="nota.description"
+          content="nota.content">
+        </na-elemento-nota>
+       
+       </p> 
+    </div>
+  </div>
+</div>
+
